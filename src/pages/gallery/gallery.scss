@@ -1,0 +1,26 @@
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  article {
+    border: 1px solid transparent;
+    transition: var(--transition);
+    &:hover {
+      border-color: var(--color-gray-500);
+    }
+  }
+}
+@media (max-width: 1024.98px) {
+  .gallery__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    article {
+      border: 0;
+    }
+  }
+}
+@media (max-width: 600.98px) {
+  .gallery__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
